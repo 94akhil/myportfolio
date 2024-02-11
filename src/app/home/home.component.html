@@ -1,0 +1,42 @@
+<!-- <section class="panel"> -->
+  <div class="row d-flex justify-content-between panel">
+    <nb-card class="col-md-6 tile-1">
+      <nb-card-body class="center-alignment">
+        <nb-card class=" bubble bubble-1 glow glow-1">
+          <nb-card-body
+            class="center-alignment"
+            (mouseenter)="onMouseEnter('one')"
+            (mouseleave)="onMouseLeave('one')"
+          >
+            <a (click)="goToView('artist')" class="bubble-content">
+              <nb-icon icon="color-palette" status="warning"></nb-icon>
+              <span>Artist</span>
+            </a>
+          </nb-card-body>
+        </nb-card>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="col-md-6 tile-2" >
+      <nb-card-body class="center-alignment">
+        <div class="binary-rain" *ngIf="showRain">
+          <div *ngFor="let column of binaryColumns">
+            <div *ngFor="let digit of column">{{ digit }}</div>
+          </div>
+        </div>
+        <nb-card class="bubble bubble-2 glow glow-2">
+          <nb-card-body
+            class="center-alignment"
+            (mouseenter)="onMouseEnter('two')"
+            (mouseleave)="onMouseLeave('two')"
+          >
+            <a (click)="goToView('coder')" class="bubble-content">
+              <nb-icon icon="monitor" status="warning"></nb-icon>
+              <span>Coder</span>
+            </a>
+          </nb-card-body>
+        </nb-card>
+      </nb-card-body>
+    </nb-card>
+  </div>
+<!-- </section> -->
