@@ -1,101 +1,255 @@
-.focus{
-    background: linear-gradient(45deg, #a29b9b, white);
+// Variables for colors or fonts can be defined here
+$primary-color: #333;
+$secondary-color: #fff;
+
+$orange: #ffa500; 
+$dark-gray: #333333;
+$light-gray: #f0f0f0;
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
-.panel{
-    height: 100%;
-}
+section {
+  min-height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-.center-alignment{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-.bubble-1{
-    background: #9a3646;
-    transition: background-color 300ms ease-in;
-    &:hover {
-      background: #5b0210;
-    }
-}
-.bubble-2{
-  background: #08567c;
-  transition: background-color 300ms ease-in;
-  &:hover {
-    background: #0c7bb2;
+  h1 {
+    color: $secondary-color;
   }
 }
-.bubble{
-  height: 15em;
-  border-radius: 45em;
-  width: 15em;
-  z-index: 1;
-  overflow: hidden;
+
+.section-title{
+  font-size: 2rem;
+  margin: 4rem 1rem 3rem 1rem;
 }
 
-
-.bubble-content{
-    display: grid;
-    text-align-last: center;
-}
-
-.binary-rain {
+#home {
+  // background-color: $dark-gray;
   display: flex;
-  justify-content: space-around;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
+  justify-content: left;
 }
-  
-.binary-column {
+
+#about {
+  background-color: white;
+}
+
+#portfolio {
+  background-color: $orange;
+}
+
+#contact {
+  background-color: #273744;
+}
+
+
+//---- home section : left half porperties
+.arrow-space,
+.box-space {
+  background-color: $orange;
+  height: 88vh;
+  box-shadow:3rem -5rem 9rem 1rem rgb(0, 0, 0);
+}
+
+.arrow-space {
+  width: 5vw;
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0);
+  background-color: #905e02;
+}
+
+.box-space {
+  display: flex;
+  width: 39vw;
+  align-items: center;
+  position: relative;
+}
+
+.border-space{
+  height: 88vh;
+  width: 12vw;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  left: 45vw;
+}
+
+.up-border,.down-border{
+  background:linear-gradient(45deg, #905e03, #d58b03, orange);
+  height: 7vh;
+}
+
+.up-border{
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+}
+
+.down-border{
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.arrow-space-2,
+.box-space-2 {
+  background-color: rgb(255, 123, 0);
+  height: 58vh;
+}
+
+.box-space-2 {
+  width: 31vw;
+  background: linear-gradient(67deg, orange, rgb(255 120 0 / 50%));
+  box-shadow: 3rem 3rem 2rem 1rem #894401;
+}
+
+.arrow-space-2 {
+  width: 4vw;
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0);
+  background: rgb(255 125 0);
+}
+
+.quote-space {
+  position: absolute;
+  z-index: 1;
+  width: 31vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-  
-.binary-digit {
-  animation: fall 5s infinite ease-in;
-  
+.quote {
+  color: black;
+  font-size: 5rem;
+  text-wrap: wrap;
+  margin: 1.5rem 0;
+  font-family: monospace;
+  font-weight: 900;
 }
 
-.tile-2{
-  background-image: linear-gradient(201deg, #000000,#31313194, transparent),url('../../assets/images/coding-theme.jpeg');
-  background-position-x: center;
-  transition: background-color 300ms ease-in;
-  &:hover {
-    color: greenyellow;
+.the-word {
+  font-size: 3rem;
+}
+
+.intro {
+  position: absolute;
+    left: 66vw;
+    width: 30vw;
+}
+
+.title{
+  color:white;
+}
+
+//---- home section : right half : bubble animation
+
+$bubble-count: 50;
+$sway-type: "sway-left-to-right", "sway-right-to-left";
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+@function sample($list) {
+  @return nth($list, random(length($list)));
+}
+
+.bubbles {
+  position: relative;
+  width: 55vw;
+  height: 88vh;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: var(--bubble-radius);
+  height: var(--bubble-radius);
+  border-radius: 50%;
+  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay)
+    ease-in infinite;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(41, 100%, 49%, 0.3);
+    border-radius: inherit;
+    animation: var(--bubble-sway-type) var(--bubble-sway-duration)
+      var(--bubble-sway-delay) ease-in-out alternate infinite;
+  }
+
+  @for $i from 0 through $bubble-count {
+    &:nth-child(#{$i}) {
+      --bubble-left-offset: #{random_range(0vw, 100vw)};
+      --bubble-radius: #{random_range(1vw, 10vw)};
+      --bubble-float-duration: #{random_range(6s, 12s)};
+      --bubble-sway-duration: #{random_range(4s, 6s)};
+      --bubble-float-delay: #{random_range(0s, 4s)};
+      --bubble-sway-delay: #{random_range(0s, 4s)};
+      --bubble-sway-type: #{sample($sway-type)};
+    }
   }
 }
 
-.tile-1{
-  background-image: url('../../assets/images/coder.jpeg');
-  background-position: top;
+@keyframes float-up {
+  to {
+    transform: translateY(-175vh);
+  }
 }
 
-.glow {
-  margin: 140px;
-  padding: 20px;
+@keyframes sway-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
 }
 
-.glow-1{
-  box-shadow: #9a3646 0 0 90px 33px;
+@keyframes sway-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.glow-2{
-  box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+
+//---- home section : right half : into text
+
+.glitch {
+  position: relative;
+    color: #fff;
+    font-size: 1rem;
+    font-family: sans-serif;
+    height: 17vh;
+    text-align: justify;
+    align-items: center;
+    display: flex;
+    padding: 0 1rem;
 }
 
-::ng-deep .nb-theme-default nb-icon{
-    font-size: 7.25em;
+//---- skills section : panel settings
+
+.flip-card{
+  margin: 0 3rem;
 }
 
-::ng-deep .nb-theme-default nb-card{
-  color: greenyellow;
-}
+
 

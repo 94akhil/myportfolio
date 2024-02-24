@@ -1,76 +1,20 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrl: "./home.component.scss",
 })
-export class HomeComponent implements OnInit,OnDestroy{
- 
-  constructor(private router:Router){
-
-  }
-  showRain = false;
-  binaryColumns: string[][] = [];
-  numberOfColumns = 40; // Adjust based on your design
-  columnHeight = 100; // Number of digits per column
-  updateInterval = 300; // Interval in milliseconds to add new digits
-  private updateIntervalId?: any;
-
-  ngOnInit() {
-    this.initializeColumns();
-  }
-
-  ngOnDestroy() {
-    this.stopRain();
-  }
-
-
-  goToView(mode:String){
-    this.router.navigate([mode]);
-  }
-
-  onMouseEnter(mode:string) {
-    this.startRain();
-  }
-
-  onMouseLeave(mode:string) {
-    this.stopRain();
-  }
-
- 
-  initializeColumns() {
-    this.binaryColumns = Array.from({ length: this.numberOfColumns }, () =>
-      Array.from({ length: this.columnHeight }, () => Math.floor(Math.random() * 2).toString())
-    );
-  }
-
-  startRain() {
-    this.showRain = true;
-    // Check if 'window' is defined to avoid errors in non-browser environments
-    if (typeof window !== 'undefined' && !this.updateIntervalId) {
-      this.updateIntervalId = setInterval(() => {
-        this.addNewDigits();
-      }, this.updateInterval);
-    }
-  }
-
-  stopRain() {
-    this.showRain = false;
-    // Ensure 'window' is available before trying to clear the interval
-    if (typeof window !== 'undefined' && this.updateIntervalId) {
-      clearInterval(this.updateIntervalId);
-      this.updateIntervalId = undefined;
-    }
-  }
-
-  addNewDigits() {
-    this.binaryColumns = this.binaryColumns.map(column => 
-      [Math.floor(Math.random() * 2).toString(), ...column.slice(0, this.columnHeight - 1)]
-    );
-  }  
-
+export class HomeComponent {
+  techStack = [
+    { title: "Frontend", icon: "fab fa-html5",allTech:['Angular', 'JavaScript', 'Typescript', 'HTML5', 'CSS3'] },
+    { title: "Backend", icon: "fas fa-server" ,allTech:['Node.js', 'Java', 'Python', 'ASP.NET', 'C#']},
+    { title: "DevOps", icon: "fas fa-project-diagram",allTech:['Docker', 'Git', 'Jenkins', 'Azure DevOps Server', 'ALM', 'Terraform', 'Octopus Deploy'] },
+    { title: "Database", icon: "fas fa-database",allTech:['MS SQL', 'MongoDB', 'PostgreSQL', 'Oracle', 'GraphQL'] },
+    { title: "Big Data", icon: "fas fa-chart-line",allTech:['Hadoop', 'Spark', 'Cassandra'] },
+    { title: "Testing", icon: "fas fa-flask",allTech:['Selenium', 'Protractor', 'UFT', 'Postman', 'JMeter', 'Fiddler'] },
+  ];
+  flipped = false;
+  constructor(private router: Router) {}
 }

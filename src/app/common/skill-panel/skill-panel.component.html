@@ -1,0 +1,22 @@
+<nb-flip-card
+  [flipped]="flipped"
+  [showToggleButton]="false"
+  (mouseover)="onMouseOver()"
+  (mouseout)="onMouseOut()"
+>
+  <nb-card-front>
+    <nb-card>
+      <nb-card-body class="front-panel">
+        <i class="tech-icon fa-3x fa-bounce" [ngClass]="icon"></i>
+        <p class="tech-title">{{ tech }}</p>  
+      </nb-card-body>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card>
+      <nb-card-body class="back-panel">
+        <p *ngFor="let item of techStack">{{ item }}</p>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-back>
+</nb-flip-card>

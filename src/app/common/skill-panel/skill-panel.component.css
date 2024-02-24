@@ -1,0 +1,18 @@
+::ng-deep .nb-theme-default nb-card{
+    margin:1rem 0rem !important;
+    line-height: 9.25rem !important;
+}
+
+.front-panel{
+    background-color: #273744;
+    color: white;
+}
+
+.tech-title{
+    color: white;
+}
+
+.back-panel{
+    background-color: orange;
+    color: #273744;
+}

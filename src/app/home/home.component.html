@@ -1,42 +1,91 @@
-<!-- <section class="panel"> -->
-  <div class="row d-flex justify-content-between panel">
-    <nb-card class="col-md-6 tile-1">
-      <nb-card-body class="center-alignment">
-        <nb-card class=" bubble bubble-1 glow glow-1">
-          <nb-card-body
-            class="center-alignment"
-            (mouseenter)="onMouseEnter('one')"
-            (mouseleave)="onMouseLeave('one')"
-          >
-            <a (click)="goToView('artist')" class="bubble-content">
-              <nb-icon icon="color-palette" status="warning"></nb-icon>
-              <span>Artist</span>
-            </a>
-          </nb-card-body>
-        </nb-card>
-      </nb-card-body>
-    </nb-card>
-
-    <nb-card class="col-md-6 tile-2" >
-      <nb-card-body class="center-alignment">
-        <div class="binary-rain" *ngIf="showRain">
-          <div *ngFor="let column of binaryColumns">
-            <div *ngFor="let digit of column">{{ digit }}</div>
-          </div>
-        </div>
-        <nb-card class="bubble bubble-2 glow glow-2">
-          <nb-card-body
-            class="center-alignment"
-            (mouseenter)="onMouseEnter('two')"
-            (mouseleave)="onMouseLeave('two')"
-          >
-            <a (click)="goToView('coder')" class="bubble-content">
-              <nb-icon icon="monitor" status="warning"></nb-icon>
-              <span>Coder</span>
-            </a>
-          </nb-card-body>
-        </nb-card>
-      </nb-card-body>
-    </nb-card>
+<section id="home">
+  <div class="box-space">
+    <div class="quote-space">
+      <p class="quote">Coding</p>
+      <p class="quote the-word">the</p>
+      <p class="quote">FUTURE</p>
+    </div>
+    <div class="box-space-2"></div>
+    <div class="arrow-space-2"></div>
   </div>
-<!-- </section> -->
+  <div class="arrow-space"></div>
+  <div class="border-space">
+    <div class="up-border"></div>
+    <div class="down-border"></div>
+  </div>
+  <div class="intro"></div>
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+</section>
+<section id="about">
+  <div>
+    <div class="row col-md-12 d-flex  justify-content-center section-title">My Skills</div>
+    <div class="row d-flex justify-content-center">
+      <app-skill-panel
+        class="col-md-3 flip-card"
+        *ngFor="let tech of techStack"
+        [flipped]="false"
+        [tech]="tech.title"
+        [icon] = "tech.icon"
+        [techStack] = "tech.allTech"
+      ></app-skill-panel>
+    </div>
+  </div>
+  
+</section>
+<section id="portfolio">
+  <h1>My Journey</h1>
+</section>
+<section id="contact">
+  <h1>Contact</h1>
+</section>
