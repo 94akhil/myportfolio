@@ -41,3 +41,10 @@
     width: 6rem;
     color:#2A4154;
 }
+
+.front-panel-icon{
+    align-items: center;
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+}
