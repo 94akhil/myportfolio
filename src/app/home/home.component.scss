@@ -43,7 +43,7 @@ section {
 }
 
 #portfolio {
-  background-color: $orange;
+  background-color: #c98200;
 }
 
 #contact {
@@ -242,5 +242,10 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 .pie-chart{
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.slide-left{
+  animation: 6s slidein;
 }
 

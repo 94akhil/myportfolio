@@ -63,3 +63,52 @@
 .beat {
     animation: beat 1.5s ease-in-out infinite;
 }
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%); /* Start off-screen to the left */
+      opacity: 0; /* Start faded out */
+    }
+    100% {
+      transform: translateX(0); /* End at original position */
+      opacity: 1; /* Fully visible */
+    }
+}
+  
+.slide-in-left {
+    animation: slideInFromLeft 1s ease-out forwards; /* Adjust timing to your liking */
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the left */
+      opacity: 0; /* Start faded out */
+    }
+    100% {
+      transform: translateX(0); /* End at original position */
+      opacity: 1; /* Fully visible */
+    }
+}
+  
+.slide-in-right {
+    animation: slideInFromRight 1s ease-out forwards; /* Adjust timing to your liking */
+}
+
+@keyframes spinIn {
+    from {
+      transform: rotate(0deg) scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(360deg) scale(1);
+      opacity: 1;
+    }
+}
+
+.spin-in-element {
+    animation: spinIn 1s ease-in-out forwards;
+}
+
+.animation{
+    opacity: 0;
+}

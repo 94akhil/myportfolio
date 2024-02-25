@@ -14,7 +14,7 @@
     <div class="down-border"></div>
   </div>
   <div class="intro">
-    <app-profile [hover] = "false"></app-profile>
+    <app-profile [hover]="false"></app-profile>
   </div>
   <div class="bubbles">
     <div class="bubble"></div>
@@ -71,38 +71,44 @@
 </section>
 <section id="about">
   <div class="px-5">
-    <div class="row col-md-12 d-flex  justify-content-center section-title">My Skills</div>
+    <div class="row col-md-12 d-flex justify-content-center section-title">
+      My Skills
+    </div>
+
     <div class="row d-flex justify-content-center">
-      <div class="col-md-4">
+      <div class="col-md-4 animation" #leftSkills data-animation="slideInFromLeft">
         <app-skill-panel
-        class="flip-card"
-        *ngFor="let tech of techStack1"
-        [flipped]="false"
-        [tech]="tech.title"
-        [icon] = "tech.icon"
-        [techStack] = "tech.allTech"
-        [iconStack] = "tech.allFontIcon"
-        [imgStack]="tech.allImgIcon"
-      ></app-skill-panel>
+          class="flip-card"
+          *ngFor="let tech of techStack1"
+          [flipped]="false"
+          [tech]="tech.title"
+          [icon]="tech.icon"
+          [techStack]="tech.allTech"
+          [iconStack]="tech.allFontIcon"
+          [imgStack]="tech.allImgIcon"
+        ></app-skill-panel>
       </div>
-      
-      <app-pie-chart class="col-md-4 pie-chart"></app-pie-chart>
-      <div class="col-md-4">
+
+      <app-pie-chart
+        class="col-md-4 pie-chart"
+        
+        data-animation="spin-in"
+      ></app-pie-chart>
+
+      <div class="col-md-4 animation" #rightSkills data-animation="slideInFromRight">
         <app-skill-panel
-        class="flip-card"
-        *ngFor="let tech of techStack2"
-        [flipped]="false"
-        [tech]="tech.title"
-        [icon] = "tech.icon"
-        [techStack] = "tech.allTech"
-        [iconStack] = "tech.allFontIcon"
-        [imgStack]="tech.allImgIcon"
-      ></app-skill-panel>
+          class="flip-card"
+          *ngFor="let tech of techStack2"
+          [flipped]="false"
+          [tech]="tech.title"
+          [icon]="tech.icon"
+          [techStack]="tech.allTech"
+          [iconStack]="tech.allFontIcon"
+          [imgStack]="tech.allImgIcon"
+        ></app-skill-panel>
       </div>
-     
     </div>
   </div>
-  
 </section>
 <section id="portfolio">
   <h1>My Journey</h1>

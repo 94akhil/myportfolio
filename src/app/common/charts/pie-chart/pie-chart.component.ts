@@ -1,4 +1,4 @@
-import { Component, PLATFORM_ID,Inject } from "@angular/core";
+import { Component, PLATFORM_ID,Inject, ElementRef, ViewChild  } from "@angular/core";
 import {  ChartData, ChartEvent, ChartType,ChartOptions } from "chart.js";
 import { isPlatformBrowser } from '@angular/common';
 
@@ -8,6 +8,7 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: "./pie-chart.component.css",
 })
 export class PieChartComponent {
+  [x: string]: any;
   
   public pieChartColors: string[] = ['#fdba41','#334b5e'];
 
@@ -52,8 +53,15 @@ export class PieChartComponent {
 
   isBrowser: boolean;
 
+  @ViewChild('pieSection')
+  pieSection!: ElementRef;
+
   constructor(@Inject(PLATFORM_ID) private platformId: any) {
     this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
+  get sectionElement(): ElementRef {
+    return this.pieSection;
   }
   
  }

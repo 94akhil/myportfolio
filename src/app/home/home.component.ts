@@ -1,12 +1,15 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit, ViewChild,Inject, PLATFORM_ID } from "@angular/core";
 import { Router } from "@angular/router";
+import { PieChartComponent } from "../common/charts/pie-chart/pie-chart.component";
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+
   path = "../../../assets/icons/";
   techStack1 = [
     {
@@ -34,21 +37,6 @@ export class HomeComponent {
       ],
       allFontIcon: [],
     }
-
-    // {
-    //   title: "Big Data",
-    //   icon: "fas fa-chart-line",
-    //   allTech: ["Hadoop", "Spark", "Cassandra"],
-    //   allImgIcon:[this.path+"hadoop.png",this.path+"r.png"],
-    //   allFontIcon:[]
-    // },
-    // {
-    //   title: "Testing",
-    //   icon: "fas fa-flask",
-    //   allTech: ["Selenium", "Protractor", "Postman", "JMeter", "Fiddler"],
-    //   allImgIcon:[this.path+"selenium.png",this.path+"protractor.png",this.path+"feather.png"],
-    //   allFontIcon:[]
-    // },
   ];
 
   techStack2 = [
@@ -84,5 +72,38 @@ export class HomeComponent {
     
   ];
   flipped = false;
-  constructor(private router: Router) {}
+
+  @ViewChildren('leftSkills, rightSkills')
+  sections!: QueryList<ElementRef>;
+
+  @ViewChild(PieChartComponent)
+  pieChart!: PieChartComponent;
+  
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
+
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            const animationName = element.getAttribute('data-animation');
+            element.style.animationName = animationName || ''; // Apply the animation
+            element.style.opacity = '1'; // Make element visible
+            element.style.animationFillMode = 'forwards'; // Keep the state after animation
+            element.style.animationDuration = '1s'; // Animation duration
+            observer.unobserve(entry.target); // Stop observing the element
+          }
+        });
+      }, { threshold: 0.1 });
+
+      // Observe sections in the parent component
+      this.sections.forEach(section => observer.observe(section.nativeElement));
+
+      // Additionally, observe the section in the child component
+      const childSectionElement = this.pieChart.sectionElement.nativeElement;
+      observer.observe(childSectionElement);
+    }
+  }
 }

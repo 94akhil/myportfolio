@@ -1,11 +1,16 @@
 <nb-card class="profile-card">
   <nb-card-body class="header-footer">
-    <canvas baseChart
-    *ngIf="isBrowser"
-    [data]="pieChartData"
-    [labels]="pieChartLabels"
-    [options]="pieChartOptions"
-    type="pie">
-  </canvas>
+    <canvas
+      baseChart
+      #pieSection
+      class="animation"
+      data-animation="spinIn"
+      *ngIf="isBrowser"
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      type="pie"
+    >
+    </canvas>
   </nb-card-body>
 </nb-card>
