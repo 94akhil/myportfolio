@@ -16,7 +16,9 @@ import { NbThemeModule, NbSidebarModule, NbLayoutModule, NbButtonModule, NbIconM
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  NgChartsModule } from 'ng2-charts';
-
+import { Chart, registerables } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.register(...registerables, ChartDataLabels);
 
 @NgModule({
   declarations: [

@@ -28,7 +28,7 @@ section {
 
 .section-title{
   font-size: 2rem;
-  margin: 3rem 1rem 2rem 1rem;
+  margin: 3rem 0rem 2rem 0rem;
   font-weight: 600;
 }
 
@@ -233,14 +233,14 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 }
 
 
-//---- home section : left half : quote text
-
-
 //---- skills section : panel settings
 
 .flip-card{
   margin: 0 3rem;
 }
 
-
+.pie-chart{
+  display: flex;
+  align-items: center;
+}
 

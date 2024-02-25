@@ -2,9 +2,10 @@
   <nb-card-body class="header-footer">
     <canvas baseChart
     *ngIf="isBrowser"
-    [options]="pieChartOptions"
     [data]="pieChartData"
-    [type]="pieChartType">
+    [labels]="pieChartLabels"
+    [options]="pieChartOptions"
+    type="pie">
   </canvas>
   </nb-card-body>
 </nb-card>
