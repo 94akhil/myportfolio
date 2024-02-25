@@ -1,9 +1,9 @@
 <section id="home">
   <div class="box-space">
     <div class="quote-space">
-      <p class="quote">Coding</p>
+      <p class="quote"><i class="fa-solid fa-angle-left"></i>Coding &nbsp;</p>
       <p class="quote the-word">the</p>
-      <p class="quote beat">FUTURE</p>
+      <p class="quote">FUTURE/<i class="fa-solid fa-angle-right"></i></p>
     </div>
     <div class="box-space-2"></div>
     <div class="arrow-space-2"></div>
@@ -70,12 +70,13 @@
   </div>
 </section>
 <section id="about">
-  <div>
+  <div class="px-5">
     <div class="row col-md-12 d-flex  justify-content-center section-title">My Skills</div>
     <div class="row d-flex justify-content-center">
-      <app-skill-panel
-        class="col-md-3 flip-card"
-        *ngFor="let tech of techStack"
+      <div class="col-md-4">
+        <app-skill-panel
+        class="flip-card"
+        *ngFor="let tech of techStack1"
         [flipped]="false"
         [tech]="tech.title"
         [icon] = "tech.icon"
@@ -83,6 +84,22 @@
         [iconStack] = "tech.allFontIcon"
         [imgStack]="tech.allImgIcon"
       ></app-skill-panel>
+      </div>
+      
+      <app-pie-chart class="col-md-4"></app-pie-chart>
+      <div class="col-md-4">
+        <app-skill-panel
+        class="flip-card"
+        *ngFor="let tech of techStack2"
+        [flipped]="false"
+        [tech]="tech.title"
+        [icon] = "tech.icon"
+        [techStack] = "tech.allTech"
+        [iconStack] = "tech.allFontIcon"
+        [imgStack]="tech.allImgIcon"
+      ></app-skill-panel>
+      </div>
+     
     </div>
   </div>
   

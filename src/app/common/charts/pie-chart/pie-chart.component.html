@@ -1,0 +1,10 @@
+<nb-card class="profile-card">
+  <nb-card-body class="header-footer">
+    <canvas baseChart
+    *ngIf="isBrowser"
+    [options]="pieChartOptions"
+    [data]="pieChartData"
+    [type]="pieChartType">
+  </canvas>
+  </nb-card-body>
+</nb-card>

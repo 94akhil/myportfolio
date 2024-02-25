@@ -116,7 +116,7 @@ section {
 .quote-space {
   position: absolute;
   z-index: 1;
-  width: 31vw;
+  width: 33vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,9 +125,9 @@ section {
 
 .quote {
   color: black;
-  font-size: 5rem;
+  font-size: 4.5rem;
   text-wrap: wrap;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   font-family: monospace;
   font-weight: 900;
 }
