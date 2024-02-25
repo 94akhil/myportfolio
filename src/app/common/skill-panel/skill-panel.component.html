@@ -19,8 +19,10 @@
     <nb-card>
       <nb-card-body class="back-panel">
         <!-- <p *ngFor="let item of techStack">{{ item }}</p> -->
-        <div>
-          <p class="content" *ngFor="let item of techStack">{{ item }}</p> 
+        <div class="row justify-content-center p-2">
+          <img class="image-icon col-md-6" *ngFor="let img of imgStack" [src]="img" alt="">
+          <i class="fa-5x col-md-6 font-icon" *ngFor="let icon of iconStack" [ngClass]="icon"></i>
+          <!-- <p class="content col-md-6" *ngFor="let item of techStack">{{ item }}</p>  -->
         </div>
       </nb-card-body>
     </nb-card>

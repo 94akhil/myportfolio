@@ -8,7 +8,7 @@
   }
   
 .fa-shake {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
@@ -33,4 +33,33 @@
 .fa-vibrate {
     display: inline-block;
     animation: vibrate 0.8s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out forwards infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+  
+.blink {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+}
+  
+.beat {
+    animation: beat 1s ease-in-out infinite;
 }

@@ -9,9 +9,6 @@
     border-radius: 1rem !important;
 }
 
-/*
-for icon : #2A4154
-*/
 .front-panel{
     background-color: #273744;
     color: white;
@@ -32,4 +29,15 @@ for icon : #2A4154
 
 .content{
     font-weight: 600;
+}
+
+.image-icon{
+    width: 6rem;
+    height: 4.3rem;
+    margin-bottom: 1rem;
+}
+
+.font-icon{
+    width: 6rem;
+    color:#2A4154;
 }

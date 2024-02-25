@@ -11,6 +11,8 @@ export class SkillPanelComponent {
   @Input() flipped = false;
   @Input() icon = "fa-regular fa-circle-xmark";
   @Input() techStack=['None'];
+  @Input() imgStack=['None'];
+  @Input() iconStack=['None'];
 
   onMouseOver(){
     this.flipped=!this.flipped;
