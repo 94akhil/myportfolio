@@ -1,11 +1,29 @@
-<nb-card>
-    <nb-card-body>
-      <img src="../../assets/images/anime-profile.png" alt="">
-    </nb-card-body>
-  </nb-card>
-  <p class="title">Who am I ?</p>
-  <p class="glitch">
-    Who am I? Just your friendly neighborhood Full Stack Developer, spinning web wonders with a touch of code magic! 
-    I blend front-end dazzle with back-end muscle to cook up unforgettable digital delights.
-     Let's make the internet a playground!
-  </p>
+<nb-card class="profile-card">
+  <nb-card-header class="header-footer">
+    <p class="text title">Who am I ?</p>
+  </nb-card-header>
+  <nb-card-body >
+    <img
+      *ngIf="!hover"
+      class="profile-img"
+      src="../../assets/images/anime-profile.png"
+      alt=""
+      (mouseover)="onMouseOver()" 
+    />
+    <img
+      *ngIf="hover"
+      class="profile-img profile-img-2"
+      src="../../assets/images/profile.jpg"
+      alt=""
+      (mouseout)="onMouseOut()"
+    />
+  </nb-card-body>
+  <nb-card-footer class="header-footer">
+    <p class="text">
+      Just your friendly neighborhood Full Stack Developer, spinning web wonders
+      with a touch of code magic! I blend front-end dazzle with back-end muscle
+      to cook up unforgettable digital delights. Let's make the internet a
+      playground!
+    </p>
+  </nb-card-footer>
+</nb-card>

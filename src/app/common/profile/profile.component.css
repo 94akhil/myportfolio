@@ -1,0 +1,29 @@
+.profile-card{
+    background: transparent;
+}
+
+.profile-img{
+    height: 34vh;
+    border-radius: 10rem;
+}
+
+.profile-img-2{
+    width: 16.5vw;
+}
+
+.text{
+    color: wheat;
+    text-align: justify;
+    font-size: 1rem;
+    text-align-last: center;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header-footer{
+    border: none;
+}

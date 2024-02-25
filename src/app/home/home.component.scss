@@ -28,7 +28,7 @@ section {
 
 .section-title{
   font-size: 2rem;
-  margin: 4rem 1rem 3rem 1rem;
+  margin: 3rem 1rem 2rem 1rem;
 }
 
 #home {
@@ -137,8 +137,9 @@ section {
 
 .intro {
   position: absolute;
-    left: 66vw;
-    width: 30vw;
+  left: 64vw;
+  width: 24vw;
+  z-index: 2;
 }
 
 .title{

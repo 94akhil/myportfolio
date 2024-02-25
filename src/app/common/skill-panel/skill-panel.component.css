@@ -1,6 +1,12 @@
 ::ng-deep .nb-theme-default nb-card{
     margin:1rem 0rem !important;
     line-height: 9.25rem !important;
+    min-height: 29vh !important;
+    border: 0.0625rem solid transparent;
+}
+
+::ng-deep .nb-theme-default nb-card-body{
+    border-radius: 1rem !important;
 }
 
 .front-panel{
@@ -15,4 +21,8 @@
 .back-panel{
     background-color: orange;
     color: #273744;
+}
+
+.back-card{
+    border: none !important;
 }
