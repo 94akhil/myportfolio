@@ -18,7 +18,10 @@
   <nb-card-back>
     <nb-card>
       <nb-card-body class="back-panel">
-        <p *ngFor="let item of techStack">{{ item }}</p>
+        <!-- <p *ngFor="let item of techStack">{{ item }}</p> -->
+        <div>
+          <p class="content" *ngFor="let item of techStack">{{ item }}</p> 
+        </div>
       </nb-card-body>
     </nb-card>
   </nb-card-back>

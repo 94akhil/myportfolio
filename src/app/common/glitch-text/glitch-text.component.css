@@ -1,0 +1,58 @@
+.glitch {
+    font-size: 5rem;
+    color: black;
+    position: relative;
+    display: inline-block;
+    &:before, &:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:before {
+      left: 2px;
+      text-shadow: -5px 0 red;
+      animation: glitch-animation 2s infinite;
+    }
+    &:after {
+      left: -2px;
+      text-shadow: 1px 0 blue;
+      animation: glitch-animation-2 1.5s infinite;
+    }
+  }
+  
+  @keyframes glitch-animation {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    10% {
+      clip-path: inset(0 0 0 0);
+    }
+    20% {
+      clip-path: inset(0 100% 0 0);
+    }
+    30% {
+      clip-path: inset(0 0 0 0);
+    }
+    40%, 100% {
+      clip-path: inset(0 100% 0 0);
+    }
+  }
+  
+  @keyframes glitch-animation-2 {
+    0% {
+      clip-path: inset(0 0 0 100%);
+    }
+    10% {
+      clip-path: inset(0 0 0 0);
+    }
+    20% {
+      clip-path: inset(0 0 0 100%);
+    }
+    30% {
+      clip-path: inset(0 0 0 0);
+    }
+    40%, 100% {
+      clip-path: inset(0 0 0 100%);
+    }
+  }

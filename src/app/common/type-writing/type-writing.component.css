@@ -1,0 +1,45 @@
+.quote {
+    color: black;
+    font-size: 5rem;
+    text-wrap: wrap;
+    margin: 0rem 0;
+    font-family: monospace;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 5rem;
+    border-right: 1px solid hsl(0, 0%, 0%);
+    
+  }
+  
+  .quote-first {
+    animation: typewriter 4s steps(44) 1s 1 normal both,animation;
+    animation-delay: 0s, 4s; /* No delay for typewriter, blink follows immediately */
+  }
+  
+  .quote-second {
+    animation: typewriter 4s steps(44) 1s 1 normal both,animation;
+    animation-delay: 5s, 9s; /* 5s delay for typewriter, blink follows immediately after */
+  }
+  
+  .quote-third {
+    animation: typewriter 4s steps(44) 1s 1 normal both,animation, blinkTextCursor 500ms infinite;
+    animation-delay: 10s, 14s; /* 10s delay for typewriter, blink follows immediately after */
+  }
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 20vw;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: hsl(0, 0%, 80%);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }

@@ -13,13 +13,17 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './common/profile/profile.component';
 import { SkillPanelComponent } from './common/skill-panel/skill-panel.component';
+import { GlitchTextComponent } from './common/glitch-text/glitch-text.component';
+import { TypeWritingComponent } from './common/type-writing/type-writing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    SkillPanelComponent
+    SkillPanelComponent,
+    GlitchTextComponent,
+    TypeWritingComponent
   ],
   imports: [
     BrowserModule,
