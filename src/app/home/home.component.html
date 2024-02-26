@@ -1,72 +1,14 @@
 <section id="home">
-  <div class="box-space">
-    <div class="quote-space">
-      <p class="quote"><i class="fa-solid fa-angle-left"></i>Coding &nbsp;</p>
-      <p class="quote the-word">the</p>
-      <p class="quote">FUTURE/<i class="fa-solid fa-angle-right"></i></p>
+  <div class="row d-flex w-100">
+    <div class="col-md-8 col-12">
+      <app-into-panel class="d-flex"></app-into-panel>
     </div>
-    <div class="box-space-2"></div>
-    <div class="arrow-space-2"></div>
-  </div>
-  <div class="arrow-space"></div>
-  <div class="border-space">
-    <div class="up-border"></div>
-    <div class="down-border"></div>
-  </div>
-  <div class="intro">
-    <app-profile [hover]="false"></app-profile>
-  </div>
-  <div class="bubbles">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
+    <div class="col-md-4 col-12 d-flex justify-content-end align-items-center">
+      <div class="intro">
+        <app-profile [hover]="false"></app-profile>
+      </div>
+    </div>
+    <app-bubbles class="bubble-wrap"></app-bubbles>
   </div>
 </section>
 <section id="about">
@@ -76,10 +18,10 @@
     </div>
 
     <div class="row d-flex justify-content-center">
-      <div class="col-md-4">
+      <div class="col-md-4" #leftSkills data-animation="slideInFromLeft">
         <img class="w-100 h-100" src="../../assets/images/checkout.jpg">
       </div>
-      <div class="col-md-4 animation" #leftSkills data-animation="slideInFromLeft">
+      <div class="col-md-4 animation" #rightSkills data-animation="slideInFromRight">
         <app-skill-panel
           class="flip-card"
           *ngFor="let tech of techStack1"
@@ -108,11 +50,15 @@
 </section>
 <section id="portfolio">
   <div class="px-5">
-    <div class="row col-md-12 d-flex justify-content-center section-title skill-section-title">
+    <!-- <div class="row col-md-12 d-flex justify-content-center section-title">
       My Journey
-    </div>
+    </div> -->
     <div class="row d-flex justify-content-center">
-      
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <img class="w-100 h-100 exp-img" src="../../assets/images/superhero.jpg">
+      </div>
+      <div class="col-md-4"></div>
     </div>
   </div>
 

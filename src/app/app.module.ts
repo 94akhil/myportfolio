@@ -19,6 +19,7 @@ import {  NgChartsModule } from 'ng2-charts';
 import { Chart, registerables } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { BubblesComponent } from './common/bubbles/bubbles.component';
+import { IntoPanelComponent } from './common/into-panel/into-panel.component';
 Chart.register(...registerables, ChartDataLabels);
 
 @NgModule({
@@ -30,7 +31,8 @@ Chart.register(...registerables, ChartDataLabels);
     GlitchTextComponent,
     TypeWritingComponent,
     PieChartComponent,
-    BubblesComponent
+    BubblesComponent,
+    IntoPanelComponent
   ],
   imports: [
     BrowserModule,
