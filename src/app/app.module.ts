@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  NgChartsModule } from 'ng2-charts';
 import { Chart, registerables } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { BubblesComponent } from './common/bubbles/bubbles.component';
 Chart.register(...registerables, ChartDataLabels);
 
 @NgModule({
@@ -28,7 +29,8 @@ Chart.register(...registerables, ChartDataLabels);
     SkillPanelComponent,
     GlitchTextComponent,
     TypeWritingComponent,
-    PieChartComponent
+    PieChartComponent,
+    BubblesComponent
   ],
   imports: [
     BrowserModule,

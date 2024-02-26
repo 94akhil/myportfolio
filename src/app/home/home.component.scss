@@ -40,16 +40,18 @@ section {
 }
 
 #about {
-  background-color: #273744;
+  background-color: white;
+  // background-color: #273744;
   // background-image: url('../../assets/images/programmer.jpg');
 }
 
 #portfolio {
-  background-color: white;
+  background-color: #c98201;
+  // background-image: url('../../assets/images/scooty.png');
 }
 
 #contact {
-  background-color: #c98200;;
+  background-color: #273744;
 }
 
 
@@ -252,6 +254,6 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 }
 
 .skill-section-title{
-  color: white;
+  color: #c98201;
 }
 

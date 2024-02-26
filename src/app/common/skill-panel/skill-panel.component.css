@@ -13,7 +13,8 @@
 .front-panel{
     /* background-color: #273744;
     color: white; */
-    background: linear-gradient(2deg, #4c3202, #c98201);
+    /* background: linear-gradient(2deg, #4c3202, #c98201); */
+    background-color: #c98201;
     color: white;
     border: 0.15rem solid white;
 }
@@ -28,6 +29,7 @@
     color: #273744; */
     background-color: white;
     color: #273744;
+    border: 0.25rem solid #273744;
 }
 
 .back-card{
