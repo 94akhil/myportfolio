@@ -3,6 +3,7 @@
     line-height: 9.25rem !important;
     min-height: 29vh !important;
     border: 0.0625rem solid transparent;
+    border-radius: 1.25rem !important;
 }
 
 ::ng-deep .nb-theme-default nb-card-body{
@@ -10,16 +11,22 @@
 }
 
 .front-panel{
-    background-color: #273744;
+    /* background-color: #273744;
+    color: white; */
+    background: linear-gradient(2deg, #4c3202, #c98201);
     color: white;
+    border: 0.15rem solid white;
 }
 
 .tech-title{
     color: white;
+    font-size: 1rem;
 }
 
 .back-panel{
-    background-color: orange;
+    /* background-color: orange;
+    color: #273744; */
+    background-color: white;
     color: #273744;
 }
 

@@ -6,6 +6,7 @@ $orange: #ffa500;
 $dark-gray: #333333;
 $light-gray: #f0f0f0;
 
+
 body {
   margin: 0;
   padding: 0;
@@ -39,15 +40,16 @@ section {
 }
 
 #about {
-  background-color: white;
+  background-color: #273744;
+  // background-image: url('../../assets/images/programmer.jpg');
 }
 
 #portfolio {
-  background-color: #c98200;
+  background-color: white;
 }
 
 #contact {
-  background-color: #273744;
+  background-color: #c98200;;
 }
 
 
@@ -247,5 +249,9 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 
 .slide-left{
   animation: 6s slidein;
+}
+
+.skill-section-title{
+  color: white;
 }
 

@@ -10,7 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class PieChartComponent {
   [x: string]: any;
   
-  public pieChartColors: string[] = ['#fdba41','#334b5e'];
+  public pieChartColors: string[] = ['#fdba41','white'];
 
   public pieChartOptions: ChartOptions<'pie'> = {
     responsive: true,
@@ -28,7 +28,7 @@ export class PieChartComponent {
         anchor: 'center',
         align: 'center',
         font: {
-          size: 20,
+          size: 18,
           weight: 'bold'
         },
         formatter: (value, context) => {
@@ -44,8 +44,8 @@ export class PieChartComponent {
     labels: this.pieChartLabels,
     datasets: [{
       data: [45, 55],
-      backgroundColor: ['rgb(39 55 68)', 'rgb(255 165 0)'],
-      hoverBackgroundColor: ['#334b5e','#fdba41' ]
+      backgroundColor: ['rgb(39 55 68)', '#bd7a02'],
+      hoverBackgroundColor: ['#334b5e','rgb(255 165 0)' ]
     }]
   };
 
