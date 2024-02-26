@@ -1,14 +1,16 @@
-<div class="box-space">
-  <div class="quote-space">
-    <p class="quote"><i class="fa-solid fa-angle-left"></i>Coding &nbsp;</p>
-    <p class="quote the-word">the</p>
-    <p class="quote">FUTURE/<i class="fa-solid fa-angle-right"></i></p>
+<div class="d-flex w-100">
+  <div class="col-md-7 box-space" [ngClass]="{'col-9': windowWidth > 576, 'col-10': windowWidth <= 576}">
+    <div class="col-10 d-flex justify-content-center box-space-2">
+        <!-- <img class="w-100 h-100" src="../../../assets/images/CodingTheFuture.png"> -->
+        <p class="quote"><i class="fa-solid fa-angle-left caret"></i>Coding &nbsp;</p>
+        <p class="quote the-word">the</p>
+        <p class="quote">FUTURE/<i class="fa-solid fa-angle-right caret"></i></p>
+    </div>
+    <div class="col-1 arrow-space-2"></div>
   </div>
-  <div class="box-space-2"></div>
-  <div class="arrow-space-2"></div>
-</div>
-<div class="arrow-space"></div>
-<div class="border-space">
-  <div class="up-border"></div>
-  <div class="down-border"></div>
+  <div class="col-1 arrow-space"></div>
+  <div class="col-2 border-space">
+    <div class="up-border"></div>
+    <div class="down-border"></div>
+  </div>
 </div>

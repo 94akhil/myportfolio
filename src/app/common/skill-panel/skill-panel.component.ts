@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-skill-panel',
   templateUrl: './skill-panel.component.html',
-  styleUrl: './skill-panel.component.css'
+  styleUrl: './skill-panel.component.scss'
 })
 export class SkillPanelComponent {
 

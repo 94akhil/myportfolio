@@ -5,7 +5,7 @@ import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: "app-pie-chart",
   templateUrl: "./pie-chart.component.html",
-  styleUrl: "./pie-chart.component.css",
+  styleUrl: "./pie-chart.component.scss",
 })
 export class PieChartComponent {
   [x: string]: any;

@@ -1,9 +1,9 @@
 <section id="home">
-  <div class="row d-flex w-100">
+  <div class="row d-flex">
     <div class="col-md-8 col-12">
       <app-into-panel class="d-flex"></app-into-panel>
     </div>
-    <div class="col-md-4 col-12 d-flex justify-content-end align-items-center">
+    <div class="col-md-4 col-12 px-5 d-flex justify-content-end align-items-center">
       <div class="intro">
         <app-profile [hover]="false"></app-profile>
       </div>
@@ -21,6 +21,7 @@
       <div class="col-md-4" #leftSkills data-animation="slideInFromLeft">
         <img class="w-100 h-100" src="../../assets/images/checkout.jpg">
       </div>
+      
       <div class="col-md-4 animation" #rightSkills data-animation="slideInFromRight">
         <app-skill-panel
           class="flip-card"
