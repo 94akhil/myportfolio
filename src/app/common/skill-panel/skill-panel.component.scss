@@ -1,10 +1,12 @@
-::ng-deep .nb-theme-default nb-card{
+.skill-card{
     margin:1rem 0rem !important;
     line-height: 9.25rem !important;
-    min-height: 29vh !important;
+    min-height: 30vh !important;
+    max-height: 30vh !important;
     border: 0.0625rem solid transparent;
     border-radius: 1.25rem !important;
 }
+
 
 ::ng-deep .nb-theme-default nb-card-body{
     border-radius: 1rem !important;
@@ -56,4 +58,8 @@
     height: 18vh;
     display: flex;
     justify-content: center;
+}
+
+.icon-container{
+    min-height: 26vh;
 }

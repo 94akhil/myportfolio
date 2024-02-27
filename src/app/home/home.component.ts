@@ -1,7 +1,17 @@
-import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit, ViewChild,Inject, PLATFORM_ID } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  QueryList,
+  ViewChildren,
+  AfterViewInit,
+  ViewChild,
+  Inject,
+  PLATFORM_ID,
+  HostListener,
+} from "@angular/core";
 import { Router } from "@angular/router";
 import { PieChartComponent } from "../common/charts/pie-chart/pie-chart.component";
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser } from "@angular/common";
 
 @Component({
   selector: "app-home",
@@ -9,7 +19,6 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: "./home.component.scss",
 })
 export class HomeComponent implements AfterViewInit {
-
   path = "../../../assets/icons/";
   techStack1 = [
     {
@@ -33,10 +42,10 @@ export class HomeComponent implements AfterViewInit {
         this.path + "mysql.png",
         this.path + "mongo.png",
         this.path + "oracle.png",
-        this.path + "postgresql.png"
+        this.path + "postgresql.png",
       ],
       allFontIcon: [],
-    }
+    },
   ];
 
   techStack2 = [
@@ -67,43 +76,113 @@ export class HomeComponent implements AfterViewInit {
         "fa-brands fa-gitlab",
         "fa-brands fa-jenkins",
       ],
-    }
-    
-    
+    },
   ];
   flipped = false;
 
-  @ViewChildren('leftSkills, rightSkills')
+  @ViewChildren("leftSkills, rightSkills")
   sections!: QueryList<ElementRef>;
 
   @ViewChild(PieChartComponent)
   pieChart!: PieChartComponent;
-  
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}
 
+  workExperience = [
+    {
+      title: "Application Development Senior Analyst",
+      companyName: "Accenture",
+      icon: "pi pi-shopping-cart",
+      color: "#9C27B0",
+      image: "game-controller.jpg",
+    },
+    {
+      title: "Technology Analyst",
+      companyName: "Infosys Limited",
+      icon: "pi pi-cog",
+      color: "#673AB7",
+    },
+    {
+      title: "Senior Software Engineer",
+      companyName: "Infosys Limited",
+      icon: "pi pi-shopping-cart",
+      color: "#FF9800",
+    },
+    {
+      title: "Software Engineer",
+      companyName: "Infosys Limited",
+      icon: "pi pi-check",
+      color: "#607D8B",
+    },
+  ];
+
+  academics = [
+    {
+      title: "M.S. in Computer Science",
+      companyName: "University of Texas at Dallas",
+      icon: "pi pi-shopping-cart",
+      color: "#9C27B0",
+      image: "game-controller.jpg",
+    },
+    {
+      title: "B.E. in Electronics and Communication Engineering",
+      companyName: "NITTE Meenakshi Institute of Technology",
+      icon: "pi pi-cog",
+      color: "#673AB7",
+    },
+  ];
+  internship = [
+    {
+      title: "Software Development Engineering Intern",
+      companyName: "Development Dimensions International",
+      icon: "pi pi-shopping-cart",
+      color: "#9C27B0",
+      image: "game-controller.jpg",
+    },
+  ];
+  public windowWidth!: number;
+
+  
+
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.windowWidth = window.innerWidth;
+    }
+  }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const element = entry.target as HTMLElement;
-            const animationName = element.getAttribute('data-animation');
-            element.style.animationName = animationName || ''; // Apply the animation
-            element.style.opacity = '1'; // Make element visible
-            element.style.animationFillMode = 'forwards'; // Keep the state after animation
-            element.style.animationDuration = '1s'; // Animation duration
-            observer.unobserve(entry.target); // Stop observing the element
-          }
-        });
-      }, { threshold: 0.1 });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const element = entry.target as HTMLElement;
+              const animationName = element.getAttribute("data-animation");
+              element.style.animationName = animationName || ""; // Apply the animation
+              element.style.opacity = "1"; // Make element visible
+              element.style.animationFillMode = "forwards"; // Keep the state after animation
+              element.style.animationDuration = "1s"; // Animation duration
+              observer.unobserve(entry.target); // Stop observing the element
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
       // Observe sections in the parent component
-      this.sections.forEach(section => observer.observe(section.nativeElement));
+      this.sections.forEach((section) =>
+        observer.observe(section.nativeElement)
+      );
 
       // Additionally, observe the section in the child component
       const childSectionElement = this.pieChart.sectionElement.nativeElement;
       observer.observe(childSectionElement);
     }
+  }
+
+  @HostListener("window:resize", ["$event"])
+  onResize(event: any) {
+    this.windowWidth = window.innerWidth;
   }
 }

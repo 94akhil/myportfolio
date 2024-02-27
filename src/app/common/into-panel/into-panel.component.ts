@@ -1,4 +1,5 @@
-import { Component, HostListener } from "@angular/core";
+import { Component, HostListener,Inject, PLATFORM_ID } from "@angular/core";
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: "app-into-panel",
@@ -6,14 +7,17 @@ import { Component, HostListener } from "@angular/core";
   styleUrl: "./into-panel.component.scss",
 })
 export class IntoPanelComponent {
-  public windowWidth: number;
+  public windowWidth!: number;
 
-  constructor() {
-    this.windowWidth = window.innerWidth; // Initialize with the current width
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)){
+      this.windowWidth = window.innerWidth; 
+    }
+    
   }
 
   @HostListener("window:resize", ["$event"])
   onResize(event:any) {
-    this.windowWidth = window.innerWidth; // Update width on resize
+    this.windowWidth = window.innerWidth; 
   }
 }

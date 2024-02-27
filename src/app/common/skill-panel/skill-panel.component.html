@@ -5,7 +5,7 @@
   (mouseout)="onMouseOut()"
 >
   <nb-card-front>
-    <nb-card>
+    <nb-card class="skill-card">
       <nb-card-body class="front-panel">
         <div>
           <div class="front-panel-icon"><i class="tech-icon fa-4x beat" [ngClass]="icon"></i></div>
@@ -16,10 +16,10 @@
     </nb-card>
   </nb-card-front>
   <nb-card-back>
-    <nb-card>
+    <nb-card class="skill-card">
       <nb-card-body class="back-panel">
         <!-- <p *ngFor="let item of techStack">{{ item }}</p> -->
-        <div class="row justify-content-center p-2">
+        <div class="row d-flex justify-content-center align-items-center p-2 icon-container">
           <img class="image-icon col-md-6" *ngFor="let img of imgStack" [src]="img" alt="">
           <i class="fa-5x col-md-6 font-icon" *ngFor="let icon of iconStack" [ngClass]="icon"></i>
           <!-- <p class="content col-md-6" *ngFor="let item of techStack">{{ item }}</p>  -->

@@ -1,0 +1,23 @@
+@layer reset, primeng;
+
+@layer reset {
+
+    card{
+        background-color: red !important;
+    }
+
+    ::ng-deep {
+        .p-timeline-event-opposite{
+            flex: 0;
+        }
+
+        .p-timeline-event-connector{
+            height: 16vh !important;
+        }
+
+        .p-timeline-event-content{
+            color:white;
+            font-weight: 500;
+        }
+    }
+}

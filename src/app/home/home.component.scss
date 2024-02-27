@@ -93,5 +93,38 @@ section {
 
 //----- experience section
 .exp-img{
-  border-radius: 22rem;
+  border-radius: 30rem;
+}
+
+.exp-sm-img{
+  height: 40vh !important;
+}
+
+.exp-lg-img{
+  height: 56vh !important;
+}
+
+.right-stepper{
+  transform: scaleX(-1);
+}
+
+::ng-deep .right-stepper .header {
+  .label-index,.label{
+    transform: scaleX(-1);
+  }
+}
+
+.timeline-header{
+  color: white;
+}
+
+.timeline-left{
+  text-align: left;
+}
+.timeline-right{
+  text-align: right;
+}
+
+.portfolio-container{
+  width: -webkit-fill-available;
 }
