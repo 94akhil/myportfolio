@@ -67,14 +67,14 @@
       My Journey
     </div> -->
     <div class="row d-flex justify-content-center">
-      <div class="p-5 col-md-4 col-12">
+      <div class="p-5 col-md-4 col-12 timeline">
         <h5 class="px-4 timeline-header timeline-left">Experiences</h5>
         <app-timeline [align]="'left'" [data]="workExperience"></app-timeline>
       </div>
       <div class="p-5 col-md-4 col-12 d-flex justify-content-center align-items-center">
         <img
           class="exp-img"
-          [ngClass]="{'exp-lg-img': windowWidth >= 1024, 'exp-sm-img': windowWidth < 1024}"
+          [ngClass]="{'exp-lg-img': windowWidth > 1024, 'exp-sm-img': windowWidth <= 1024}"
           src="../../assets/images/superhero.jpg"
         />
       </div>

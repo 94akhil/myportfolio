@@ -94,6 +94,7 @@ section {
 //----- experience section
 .exp-img{
   border-radius: 30rem;
+  z-index: 1;
 }
 
 .exp-sm-img{
@@ -112,6 +113,10 @@ section {
   .label-index,.label{
     transform: scaleX(-1);
   }
+}
+
+.timeline{
+  z-index: 2;
 }
 
 .timeline-header{
