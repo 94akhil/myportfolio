@@ -32,6 +32,8 @@
     background-color: white;
     color: #273744;
     border: 0.25rem solid #273744;
+    display: flex;
+    justify-content: center;
 }
 
 .back-card{
@@ -58,8 +60,4 @@
     height: 18vh;
     display: flex;
     justify-content: center;
-}
-
-.icon-container{
-    min-height: 26vh;
 }
