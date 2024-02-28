@@ -66,7 +66,7 @@
     <div
       class="row col-md-12 d-flex px-5 justify-content-left section-title journey-title"
     >
-      My Journey
+      My Journey so far...
     </div>
     <div class="row d-flex justify-content-center">
       <div class="p-5 col-md-4 col-12 timeline animation" #leftSkills data-animation="slideInFromLeft">
@@ -74,7 +74,7 @@
         <app-timeline [align]="'left'" [data]="workExperience"></app-timeline>
       </div>
       <div
-        class="p-5 col-md-4 col-12 d-flex justify-content-center align-items-center animation" #spinInImg data-animation="spinIn"
+        class="p-5 col-md-4 col-12 d-flex justify-content-evenly flex-column align-items-center animation" #spinInImg data-animation="spinIn"
       >
         <img
           class="exp-img"
@@ -84,6 +84,7 @@
           }"
           src="../../assets/images/superhero.jpg"
         />
+        <p class="quote"><strong>My actual power</strong> <br> <em>I don't use debuggers.  I stare down until the code confesses!</em></p>
       </div>
       <div
         class="p-5 col-md-4 col-12 d-flex justify-content-evenly flex-column animation"
