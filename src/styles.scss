@@ -44,7 +44,7 @@
 }
 
 .fade-in {
-    animation: fadeIn 2s ease-in-out forwards infinite;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes blink {
@@ -95,6 +95,21 @@
   
 .slide-in-right {
     animation: slideInFromRight 1s ease-out forwards; /* Adjust timing to your liking */
+}
+
+@keyframes slideInFromUp {
+    0% {
+      transform: translateY(100%); /* Start off-screen to the left */
+      opacity: 0; /* Start faded out */
+    }
+    100% {
+      transform: translateY(0); /* End at original position */
+      opacity: 1; /* Fully visible */
+    }
+}
+  
+.slide-in-up {
+    animation: slideInFromUp 2s ease-out forwards; /* Adjust timing to your liking */
 }
 
 @keyframes spinIn {

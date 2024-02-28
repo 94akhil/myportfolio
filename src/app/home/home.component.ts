@@ -80,7 +80,7 @@ export class HomeComponent implements AfterViewInit {
   ];
   flipped = false;
 
-  @ViewChildren("leftSkills, rightSkills,spinInImg")
+  @ViewChildren("leftSkills, rightSkills,spinInImg,quote")
   sections!: QueryList<ElementRef>;
 
   @ViewChild(PieChartComponent)
