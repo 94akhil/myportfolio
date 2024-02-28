@@ -2,10 +2,6 @@
 
 @layer reset {
 
-    card{
-        background-color: red !important;
-    }
-
     ::ng-deep {
         .p-timeline-event-opposite{
             flex: 0;
@@ -21,12 +17,16 @@
         }
 
         .p-timeline .p-timeline-event-marker{
-            border: 2px solid #263744;
-            background-color: #263744;
+            // border: 2px solid #263744;
+            // background-color: #263744;
+            border: 2px solid #c98201;
+            background-color: #c98201;
+            
         }
 
         .p-timeline .p-timeline-event-connector{
-            background-color: #263744;
+            // background-color: #263744;
+            background-color: #c98201;
         }
     }
 }

@@ -1,6 +1,6 @@
 import {
   CommonModule
-} from "./chunk-FCRKQZSQ.js";
+} from "./chunk-KWRXKY6T.js";
 import {
   Component,
   Directive,
@@ -19,7 +19,7 @@ import {
   ɵɵdirectiveInject,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-EJPQWB2I.js";
+} from "./chunk-BPXQU5MZ.js";
 import {
   __spreadValues
 } from "./chunk-ASLTLD6L.js";
@@ -273,6 +273,11 @@ var ObjectUtils = class _ObjectUtils {
     return a !== a && b !== b;
   }
 };
+var lastId = 0;
+function UniqueComponentId(prefix = "pn_id_") {
+  lastId++;
+  return `${prefix}${lastId}`;
+}
 function ZIndexUtils() {
   let zIndexes = [];
   const generateZIndex = (key, baseZIndex) => {
@@ -1323,6 +1328,9 @@ var TreeDragDropService = class _TreeDragDropService {
 })();
 
 export {
+  ObjectUtils,
+  UniqueComponentId,
+  zindexutils,
   ConfirmEventType,
   ConfirmationService,
   ContextMenuService,
@@ -1340,4 +1348,4 @@ export {
   TranslationKeys,
   TreeDragDropService
 };
-//# sourceMappingURL=chunk-E6JMAWXK.js.map
+//# sourceMappingURL=chunk-NU4A7P4L.js.map

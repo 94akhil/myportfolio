@@ -1,0 +1,8 @@
+@layer reset, primeng;
+
+@layer reset {
+    ::ng-deep .p-button{
+        background-color: #294b65 !important;
+    }
+}
+

@@ -61,7 +61,7 @@
     </div>
   </div>
 </section>
-<section id="portfolio">
+<section id="experience">
   <div class="portfolio-container">
     <div
       class="row col-md-12 d-flex px-5 justify-content-left section-title journey-title"
@@ -69,23 +69,31 @@
       My Journey so far...
     </div>
     <div class="row d-flex justify-content-center">
-      <div class="p-5 col-md-4 col-12 timeline animation" #leftSkills data-animation="slideInFromLeft">
+      <div
+        class="p-5 col-md-4 col-12 timeline animation"
+        #leftSkills
+        data-animation="slideInFromLeft"
+      >
         <p class="px-4 timeline-header timeline-left">Experiences</p>
         <app-timeline [align]="'left'" [data]="workExperience"></app-timeline>
       </div>
       <div
-        class="p-5 col-md-4 col-12 d-flex justify-content-evenly flex-column align-items-center " 
+        class="p-5 col-md-4 col-12 d-flex justify-content-evenly flex-column align-items-center"
       >
         <img
           class="exp-img animation"
-          #spinInImg data-animation="spinIn"
+          #spinInImg
+          data-animation="spinIn"
           [ngClass]="{
             'exp-lg-img': windowWidth > 1024,
             'exp-sm-img': windowWidth <= 1024
           }"
           src="../../assets/images/superhero.jpg"
         />
-        <p #quote data-animation="slideInFromUp" class="quote animation"><strong>My actual power</strong> <br> <em>I don't use debuggers.  I stare down until the code confesses!</em></p>
+        <p #quote data-animation="slideInFromUp" class="py-4 quote animation">
+          <strong>My actual power</strong> <br />
+          <em>I don't use debuggers. I stare down until the code confesses!</em>
+        </p>
       </div>
       <div
         class="p-5 col-md-4 col-12 d-flex justify-content-evenly flex-column animation"
@@ -104,4 +112,28 @@
     </div>
   </div>
 </section>
+<section id="project">
+  <div class="portfolio-container animation" #projectCard data-animation="flipIn">
+    <div class="row col-md-12 d-flex px-5 justify-content-left section-title">Project Highlights</div>
+    <div class="row col-md-12 px-5 d-flex justify-content-center project-desc">{{projectSectionDesc}}</div>
+    <div class="row d-flex justify-content-evenly align-items-center flex-wrap">
+      <app-project-card
+        class="col-md-4 p-5"
+        *ngFor="let data of projectData"
+        [header]="data.header"
+        [img]="data.img"
+        [techStack]="data.techStack"
+        [description]="data.description"
+        [videoId]="data.videoId"
+        [github]="data.github"
+      ></app-project-card>
+    </div>
+  </div>
+</section>
 <section id="contact"></section>
+<p-scrollTop
+  target="window"
+  styleClass="custom-scrolltop"
+  [threshold]="100"
+  icon="pi pi-arrow-up"
+></p-scrollTop>

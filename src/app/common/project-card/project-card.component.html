@@ -1,0 +1,28 @@
+<nb-card class="project-card">
+  <nb-card-header class="p-0">
+    <div class="">
+      <img class="img" alt="Card" [src]="img" />
+    </div>
+  </nb-card-header>
+  <nb-card-body class="px-3 c-body d-flex justify-content-between flex-column">
+    <div>
+      <p class="header-text">{{ header }}</p>
+      <p class="desc-text">{{ description }}</p>
+    </div>
+    <div>
+      <p-chip
+        class="tech-text px-1"
+        *ngFor="let tech of techStack"
+        [label]="tech"
+      ></p-chip>
+    </div>
+  </nb-card-body>
+  <nb-card-footer class="d-flex justify-content-between">
+    <div>
+      <app-video-player [ngClass]="{'disabled-div': !videoId}" [videoId]="videoId" [title]="header"></app-video-player>
+    </div>
+    <div>
+      <p-button (click)="navigateToURL(github)" label="GitHub" icon="pi pi-github git-btn"></p-button>
+    </div>
+  </nb-card-footer>
+</nb-card>

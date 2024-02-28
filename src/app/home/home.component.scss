@@ -27,7 +27,7 @@ section {
 }
 
 .section-title{
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 3rem 0rem 1rem 0rem;
   font-weight: 400;
 }
@@ -44,13 +44,17 @@ section {
   // background-image: url('../../assets/images/programmer.jpg');
 }
 
-#portfolio {
-  background-color: #c98201;
+#experience {
+  background-color: #273744;
   // background-image: url('../../assets/images/scooty.png');
 }
 
-#contact {
-  background-color: #273744;
+#project {
+  background-color: white;
+}
+
+#contact{
+  background-color: #c98201;
 }
 
 
@@ -141,8 +145,13 @@ section {
 
 .quote{
   color: white;
+  line-height: 2rem;
 
   em{
     font-weight: 500;
   }
+}
+
+.project-desc{
+  padding-top:1rem;
 }

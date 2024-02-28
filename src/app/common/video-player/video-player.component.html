@@ -1,0 +1,4 @@
+<p-button (click)="showDialog()" icon="pi pi-external-link view-btn" label="View"></p-button>
+<p-dialog [header]="title" [(visible)]="visible" [modal]="true">
+    <youtube-player [videoId]="videoId"></youtube-player> 
+</p-dialog>
