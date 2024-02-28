@@ -112,6 +112,21 @@
     animation: spinIn 1s ease-in-out forwards;
 }
 
+@keyframes flipIn {
+    from {
+      transform: rotateX(-90deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  
+.flip-in-element {
+    animation: flipIn 1s forwards;
+}
+
 .animation{
     opacity: 0;
 }
