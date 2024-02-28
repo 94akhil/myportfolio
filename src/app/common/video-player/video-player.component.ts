@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input ,Inject, PLATFORM_ID} from "@angular/core";
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: "app-video-player",
@@ -10,13 +11,18 @@ export class VideoPlayerComponent implements OnInit {
   @Input() videoId=''
   @Input() title=''
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit() {
-    const tag = document.createElement("script");
+    if (isPlatformBrowser(this.platformId)) {
+      const tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
     document.body.appendChild(tag);
+    }
   }
+    
 
-  showDialog() {
+  showDialog(){
     this.visible = true;
   }
 }
