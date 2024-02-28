@@ -17,9 +17,9 @@
       ></p-chip>
     </div>
   </nb-card-body>
-  <nb-card-footer class="d-flex justify-content-between flex-wrap">
-    <div>
-      <app-video-player [ngClass]="{'disabled-div': !videoId}" [videoId]="videoId" [title]="header"></app-video-player>
+  <nb-card-footer class="d-flex flex-wrap" [ngClass]="{'justify-content-center': !videoId, 'justify-content-between' : videoId}">
+    <div *ngIf="videoId">
+      <app-video-player  [videoId]="videoId" [title]="header"></app-video-player>
     </div>
     <div>
       <p-button (click)="navigateToURL(github)" label="GitHub" icon="pi pi-github git-btn"></p-button>

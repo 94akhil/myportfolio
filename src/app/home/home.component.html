@@ -1,4 +1,4 @@
-<section id="home">
+<section id="about" #about>
   <div class="row d-flex">
     <div class="col-md-8 col-12">
       <app-into-panel class="d-flex"></app-into-panel>
@@ -13,7 +13,7 @@
     <app-bubbles class="bubble-wrap"></app-bubbles>
   </div>
 </section>
-<section id="about">
+<section id="skills" #skills>
   <div class="px-5">
     <div
       class="row col-md-12 d-flex px-5 justify-content-left section-title skill-section-title"
@@ -61,7 +61,7 @@
     </div>
   </div>
 </section>
-<section id="experience">
+<section id="experience" #experience>
   <div class="portfolio-container">
     <div
       class="row col-md-12 d-flex px-5 justify-content-left section-title journey-title"
@@ -112,7 +112,7 @@
     </div>
   </div>
 </section>
-<section id="project">
+<section id="project" #project>
   <div class="portfolio-container animation" #projectCard data-animation="flipIn">
     <div class="row col-md-12 d-flex px-5 justify-content-left section-title">Project Highlights</div>
     <div class="row col-md-12 px-5 d-flex justify-content-center project-desc">{{projectSectionDesc}}</div>
@@ -130,7 +130,7 @@
     </div>
   </div>
 </section>
-<section id="contact"></section>
+<section id="contact" #contact></section>
 <p-scrollTop
   target="window"
   styleClass="custom-scrolltop"

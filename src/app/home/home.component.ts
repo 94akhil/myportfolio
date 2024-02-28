@@ -8,8 +8,9 @@ import {
   Inject,
   PLATFORM_ID,
   HostListener,
+  OnInit,
 } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { PieChartComponent } from "../common/charts/pie-chart/pie-chart.component";
 import { isPlatformBrowser } from "@angular/common";
 
@@ -18,7 +19,20 @@ import { isPlatformBrowser } from "@angular/common";
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit,OnInit {
+
+  @ViewChildren("leftSkills, rightSkills,spinInImg,quote,projectCard")
+  sections!: QueryList<ElementRef>;
+
+  @ViewChild(PieChartComponent)
+  pieChart!: PieChartComponent;
+
+  @ViewChild("about") about!: ElementRef;
+  @ViewChild("skills") skills!: ElementRef;
+  @ViewChild("experience") experience!: ElementRef;
+  @ViewChild("project") project!: ElementRef;
+  @ViewChild("contact") contact!: ElementRef;
+
   path = "../../../assets/icons/";
   techStack1 = [
     {
@@ -80,11 +94,7 @@ export class HomeComponent implements AfterViewInit {
   ];
   projectSectionDesc="This section showcases a selection of my academic projects, reflecting my hands-on experience and skills developed through rigorous coursework and research. While many of my projects are proprietary and cannot be shared publicly, these examples represent the breadth of my capabilities and my commitment to applying theoretical knowledge to practical challenges."
 
-  @ViewChildren("leftSkills, rightSkills,spinInImg,quote,projectCard")
-  sections!: QueryList<ElementRef>;
-
-  @ViewChild(PieChartComponent)
-  pieChart!: PieChartComponent;
+  
 
   workExperience = [
     {
@@ -168,12 +178,19 @@ export class HomeComponent implements AfterViewInit {
   public windowWidth!: number;
 
   constructor(
-    private router: Router,
+    private router: Router,private route: ActivatedRoute,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     if (isPlatformBrowser(this.platformId)) {
       this.windowWidth = window.innerWidth;
     }
+  }
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      const section = params['section'];
+      this.scrollToSection(section);
+    });
   }
 
   ngAfterViewInit(): void {
@@ -209,5 +226,28 @@ export class HomeComponent implements AfterViewInit {
   @HostListener("window:resize", ["$event"])
   onResize(event: any) {
     this.windowWidth = window.innerWidth;
+  }
+
+  scrollToSection(sectionName: string) {
+    console.log(sectionName)
+    if( sectionName=='about' && this.about){
+      this.about.nativeElement.scrollIntoView({ behavior: "smooth" });
+    }
+    if( sectionName=='skills' && this.skills){
+      this.skills.nativeElement.scrollIntoView({ behavior: "smooth" });
+    }
+      
+    if( sectionName=='experience' && this.experience){
+      this.experience.nativeElement.scrollIntoView({ behavior: "smooth" });
+    }
+      
+    if( sectionName=='project' && this.project){
+      this.project.nativeElement.scrollIntoView({ behavior: "smooth" });
+    }
+      
+    if( sectionName=='contact' && this.contact){
+      this.contact.nativeElement.scrollIntoView({ behavior: "smooth" });
+    }
+        
   }
 }

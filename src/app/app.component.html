@@ -1,5 +1,17 @@
 <nb-layout>
-  <nb-layout-header fixed>Codex</nb-layout-header>
+  <nb-layout-header fixed>
+    <div class="row w-100">
+      <div class="col-md-6 col-12 title">AkCodex</div>
+      <div class="col-md-6 col-12 d-flex justify-content-between">
+        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'about'}">About</a>
+        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'skills'}" >Skills</a>
+        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'experience'}" >Experience</a>
+        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'project'}" >Projects</a>
+        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'contact'}" >Contact</a>
+      </div>
+    </div>
+    
+  </nb-layout-header>
   
   <nb-layout-column class="layout">
     <router-outlet />
