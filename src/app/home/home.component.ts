@@ -33,7 +33,7 @@ export class HomeComponent implements AfterViewInit,OnInit {
   @ViewChild("project") project!: ElementRef;
   @ViewChild("contact") contact!: ElementRef;
 
-  path = "../../../assets/icons/";
+  path = "assets/icons/";
   techStack1 = [
     {
       title: "Frontend",
@@ -150,7 +150,7 @@ export class HomeComponent implements AfterViewInit,OnInit {
   projectData = [
     {
       header: "Portfolio",
-      img: "../../../assets/images/Portfolio.png",
+      img: "assets/images/Portfolio.png",
       techStack: ["Angular 17", "HTML5", "SCSS"],
       videoId:'',
       github:'https://github.com/94akhil/myportfolio',
@@ -158,7 +158,7 @@ export class HomeComponent implements AfterViewInit,OnInit {
     },
     {
       header: "Path Finder",
-      img: "../../../assets/images/pathfinder.png",
+      img: "assets/images/pathfinder.png",
       techStack: ["Unity 3D", "C#"],
       videoId:'dEsBIIr60HY',
       github:'https://github.com/94akhil/Path-finder',
@@ -166,7 +166,7 @@ export class HomeComponent implements AfterViewInit,OnInit {
     },
     {
       header: "Hate Speech Counter Generator",
-      img: "../../../assets/images/counterspeech.png",
+      img: "assets/images/counterspeech.png",
       techStack: ["Python", "Numpy", "PyTorch", "T5 model"],
       videoId:'1GTMHehUtbA',
       github:'https://github.com/94akhil/hate-speech-counter',
