@@ -18,7 +18,6 @@ import { InfoCardComponent } from "./common/info-card/info-card.component";
 import { TimelineComponent } from './common/timeline/timeline.component';
 import { ProjectCardComponent } from './common/project-card/project-card.component';
 import { VideoPlayerComponent } from './common/video-player/video-player.component';
-import { GalleryComponent } from './common/gallery/gallery.component';
 
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -63,7 +62,6 @@ import { DialogModule } from 'primeng/dialog';
     TimelineComponent,
     ProjectCardComponent,
     VideoPlayerComponent,
-    GalleryComponent,
   ],
   imports: [
     BrowserModule,
