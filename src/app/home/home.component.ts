@@ -80,7 +80,7 @@ export class HomeComponent implements AfterViewInit {
   ];
   flipped = false;
 
-  @ViewChildren("leftSkills, rightSkills")
+  @ViewChildren("leftSkills, rightSkills,spinInImg")
   sections!: QueryList<ElementRef>;
 
   @ViewChild(PieChartComponent)
@@ -90,52 +90,49 @@ export class HomeComponent implements AfterViewInit {
     {
       title: "Application Development Senior Analyst",
       companyName: "Accenture",
-      icon: "pi pi-shopping-cart",
-      color: "#9C27B0",
-      image: "game-controller.jpg",
+      duration:"August 2021 - December 2021",
+      timespan:"(5 months)"
     },
     {
       title: "Technology Analyst",
       companyName: "Infosys Limited",
-      icon: "pi pi-cog",
-      color: "#673AB7",
+      duration:"January 2020 - December 2021",
+      timespan:"(1 year 8 months)"
     },
     {
       title: "Senior Software Engineer",
       companyName: "Infosys Limited",
-      icon: "pi pi-shopping-cart",
-      color: "#FF9800",
+      duration:"October 2018 - January 2020",
+      timespan:"(1 year 4 months)"
     },
     {
       title: "Software Engineer",
       companyName: "Infosys Limited",
-      icon: "pi pi-check",
-      color: "#607D8B",
+      duration:"June 2016 - October 2018",
+      timespan:"(2 years 5 months)"
     },
   ];
 
   academics = [
     {
-      title: "M.S. in Computer Science",
+      title: "Master of Science in Computer Science",
       companyName: "University of Texas at Dallas",
-      icon: "pi pi-shopping-cart",
-      color: "#9C27B0",
-      image: "game-controller.jpg",
+      duration:"January 2022 - December 2023",
+      timespan:"",
     },
     {
-      title: "B.E. in Electronics and Communication Engineering",
+      title: "Bachelor of Engineering in Electronics and Communication Engineering",
       companyName: "NITTE Meenakshi Institute of Technology",
-      icon: "pi pi-cog",
-      color: "#673AB7",
+      duration:"August 2012 - August 2016",
+      timespan:"",
     },
   ];
   internship = [
     {
       title: "Software Development Engineering Intern",
       companyName: "Development Dimensions International",
-      icon: "pi pi-shopping-cart",
-      color: "#9C27B0",
-      image: "game-controller.jpg",
+      duration:"May 2023 - Dec 2023",
+      timespan:"(8 months)",
     },
   ];
   public windowWidth!: number;

@@ -16,7 +16,7 @@
 <section id="about">
   <div class="px-5">
     <div
-      class="row col-md-12 d-flex justify-content-center section-title skill-section-title"
+      class="row col-md-12 d-flex px-5 justify-content-left section-title skill-section-title"
     >
       My Skills
     </div>
@@ -63,22 +63,33 @@
 </section>
 <section id="portfolio">
   <div class="portfolio-container">
-    <!-- <div class="row col-md-12 d-flex justify-content-center section-title">
+    <div
+      class="row col-md-12 d-flex px-5 justify-content-left section-title journey-title"
+    >
       My Journey
-    </div> -->
+    </div>
     <div class="row d-flex justify-content-center">
-      <div class="p-5 col-md-4 col-12 timeline">
+      <div class="p-5 col-md-4 col-12 timeline animation" #leftSkills data-animation="slideInFromLeft">
         <h5 class="px-4 timeline-header timeline-left">Experiences</h5>
         <app-timeline [align]="'left'" [data]="workExperience"></app-timeline>
       </div>
-      <div class="p-5 col-md-4 col-12 d-flex justify-content-center align-items-center">
+      <div
+        class="p-5 col-md-4 col-12 d-flex justify-content-center align-items-center animation" #spinInImg data-animation="spinIn"
+      >
         <img
           class="exp-img"
-          [ngClass]="{'exp-lg-img': windowWidth > 1024, 'exp-sm-img': windowWidth <= 1024}"
+          [ngClass]="{
+            'exp-lg-img': windowWidth > 1024,
+            'exp-sm-img': windowWidth <= 1024
+          }"
           src="../../assets/images/superhero.jpg"
         />
       </div>
-      <div class="p-5 col-md-4 col-12 d-flex justify-content-evenly flex-column">
+      <div
+        class="p-5 col-md-4 col-12 d-flex justify-content-evenly flex-column animation"
+        #rightSkills
+        data-animation="slideInFromRight"
+      >
         <div class="py-2">
           <h5 class="px-4 timeline-header timeline-right">Education</h5>
           <app-timeline [align]="'right'" [data]="academics"></app-timeline>
