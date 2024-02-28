@@ -21,7 +21,7 @@ import { isPlatformBrowser } from "@angular/common";
 })
 export class HomeComponent implements AfterViewInit,OnInit {
 
-  @ViewChildren("leftSkills, rightSkills,spinInImg,quote,projectCard")
+  @ViewChildren("leftSkills, rightSkills,spinInImg,quote,projectCard,contactContent")
   sections!: QueryList<ElementRef>;
 
   @ViewChild(PieChartComponent)
@@ -174,6 +174,23 @@ export class HomeComponent implements AfterViewInit,OnInit {
         "A project leveraging T5 AI models to counter online hate speech, generating responses with more than 0.75 similarity in 90% of tests, boosting community positivity.",
     },
   ];
+
+  contactDetails=[{
+    label:"akhil-shashi",
+    url:"https://www.linkedin.com/in/akhil-shashi/",
+    icon:"fa-brands fa-linkedin-in"
+  },{
+    label:"94akhil@gmail.com",
+    url:"",
+    icon:"fa-solid fa-envelope"
+  },{
+    label:"94akhil",
+    url:"https://github.com/94akhil",
+    icon:"fa-brands fa-github"
+  }]
+
+  contactheader="Let's Connect!"
+  contactDesc= "Got a question, a proposal, or just want to say hello? Don't hesitate to drop me a message below or reach out through any of my social channels. I'm all ears and always excited to connect with new people."
 
   public windowWidth!: number;
 

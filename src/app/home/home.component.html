@@ -130,7 +130,34 @@
     </div>
   </div>
 </section>
-<section id="contact" #contact></section>
+<section id="contact" #contact>
+  <div class="row w-100 py-4">
+    <div class="py-3 col-md-6 d-flex justify-content-center align-items-center">
+      <img
+      class="exp-img animation"
+      #spinInImg
+      data-animation="spinIn"
+      [ngClass]="{
+        'exp-lg-img': windowWidth > 1024,
+        'exp-sm-img': windowWidth <= 1024
+      }"
+      src="../../assets/images/callme.jpg"
+    />
+    </div>
+    <div class="px-5 col-md-6 d-flex justify-content-center align-items-center flex-column animation" #contactContent data-animation="slideInFromRight">
+      <div  class="row py-3 px-5">
+        <h1>{{contactheader}}</h1>
+        <p class="contact-desc">{{contactDesc}}</p>
+      </div>
+      <div class="row py-3">
+        <div *ngFor="let item of contactDetails" class="d-flex justify-content-between py-1">
+          <i class="fa-3x font-icon contact-icon col-4" [ngClass]="item.icon"></i>
+          <a class="d-flex align-items-center contact-text text-decoration-none col-8 w-100" [href]="item.url">{{item.label}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <p-scrollTop
   target="window"
   styleClass="custom-scrolltop"

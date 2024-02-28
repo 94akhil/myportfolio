@@ -3,11 +3,11 @@
     <div class="row w-100">
       <div class="col-md-6 col-12 title">AkCodex</div>
       <div class="col-md-6 col-12 d-flex justify-content-between">
-        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'about'}">About</a>
-        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'skills'}" >Skills</a>
-        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'experience'}" >Experience</a>
-        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'project'}" >Projects</a>
-        <a class="text-decoration-none" [routerLink]="['/portfolio']" [queryParams]="{section: 'contact'}" >Contact</a>
+        <a class="text-decoration-none nav-link" [routerLink]="['/portfolio']" [queryParams]="{section: 'about'}">About</a>
+        <a class="text-decoration-none nav-link" [routerLink]="['/portfolio']" [queryParams]="{section: 'skills'}" >Skills</a>
+        <a class="text-decoration-none nav-link" [routerLink]="['/portfolio']" [queryParams]="{section: 'experience'}" >Experience</a>
+        <a class="text-decoration-none nav-link" [routerLink]="['/portfolio']" [queryParams]="{section: 'project'}" >Projects</a>
+        <a class="text-decoration-none nav-link" [routerLink]="['/portfolio']" [queryParams]="{section: 'contact'}" >Contact</a>
       </div>
     </div>
     
@@ -17,5 +17,5 @@
     <router-outlet />
   </nb-layout-column>
 
-  <nb-layout-footer fixed>2024</nb-layout-footer>
+  <nb-layout-footer fixed><i class="d-flex align-items-center px-1 far fa-regular fa-copyright"></i> 2024 Akhil Shashi</nb-layout-footer>
 </nb-layout>

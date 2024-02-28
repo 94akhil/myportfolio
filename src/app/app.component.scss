@@ -9,4 +9,16 @@
 .title{
     font-size: 1.5rem;
     font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+}
+
+.nav-link{
+    font-size: 1rem;
+    color:#273744; 
+    transition: color 0.5s ease;
+}
+
+.nav-link:hover{
+    color: #c98201;
+    
 }
