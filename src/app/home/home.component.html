@@ -15,7 +15,7 @@
 </section>
 <section id="skills" #skills>
   <div
-    class="ruby-display w-100"
+    class="d-flex flex-column justify-content-center align-items-center w-100"
     [ngClass]="{'px-5': windowWidth > 768, 'px-1': windowWidth <= 768 }"
   >
     <div
@@ -65,7 +65,7 @@
   </div>
 </section>
 <section id="experience" #experience>
-  <div class="portfolio-container">
+  <div class="d-flex flex-column justify-content-center align-items-center">
     <div
       class="row col-md-12 d-flex px-5 justify-content-left section-title journey-title"
     >
@@ -117,21 +117,21 @@
 </section>
 <section id="project" #project>
   <div
-    class="portfolio-container ruby-display animation"
+    class="d-flex flex-column justify-content-center align-items-center animation"
     #projectCard
     data-animation="flipIn"
   >
     <div class="row col-md-12 d-flex px-5 justify-content-left section-title">
       Project Highlights
     </div>
-    <div class="row col-md-12 px-5 d-flex justify-content-center project-desc">
+    <div class="row w-100 col-md-12 px-5 d-flex justify-content-center project-desc">
       {{ projectSectionDesc }}
     </div>
     <div
-      class="row w-100 d-flex justify-content-evenly align-items-center flex-wrap"
+      class="row w-100 d-flex px-5 justify-content-evenly align-items-center flex-wrap"
     >
       <app-project-card
-        class="col-md-4 p-5"
+        class="col-md-4 py-5"
         *ngFor="let data of projectData"
         [header]="data.header"
         [img]="data.img"
