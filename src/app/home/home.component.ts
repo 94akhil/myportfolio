@@ -106,7 +106,7 @@ export class HomeComponent implements AfterViewInit,OnInit {
     {
       title: "Technology Analyst",
       companyName: "Infosys Limited",
-      duration: "January 2020 - December 2021",
+      duration: "January 2020 - August 2021",
       timespan: "(1 year 8 months)",
     },
     {
