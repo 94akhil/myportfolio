@@ -38,9 +38,16 @@ img{
     ::ng-deep .git-btn .p-button{
         background-color: #c98201 !important;
     }
+    ::ng-deep .p-button{
+        border:none;
+    }
 }
 
 .disabled-div {
     pointer-events: none; /* Prevents clicking */
     opacity: 0.4; /* Makes the div look faded */
-  }
+}
+
+.dummy-btn{
+    visibility: hidden;
+}

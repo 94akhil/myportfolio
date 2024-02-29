@@ -22,7 +22,10 @@
       <app-video-player  [videoId]="videoId" [title]="header"></app-video-player>
     </div>
     <div>
-      <p-button (click)="navigateToURL(github)" label="GitHub" icon="pi pi-github git-btn"></p-button>
+      <p-button (click)="navigateToURL(github)"class="git-btn" label="GitHub" icon="pi pi-github"></p-button>
+    </div>
+    <div *ngIf="!videoId" >
+      <p-button class="dummy-btn" icon="pi pi-github"></p-button>
     </div>
   </nb-card-footer>
 </nb-card>
