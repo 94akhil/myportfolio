@@ -1,4 +1,4 @@
-<p-button (click)="showDialog()" icon="pi pi-external-link view-btn" label="View"></p-button>
+<p-button (click)="showDialog()"[disabled]="!videoId" icon="pi pi-external-link view-btn" label="View"></p-button>
 <p-dialog [header]="title" [(visible)]="visible" [modal]="true" [breakpoints]="{ '960px': '75vw' }">
     <youtube-player [videoId]="videoId"></youtube-player> 
     <p class="text-muted py-3 m-0">Press&nbsp;<em>ESC</em>&nbsp;or&nbsp;<em>TAB+ENTER</em>&nbsp;to close the view.</p>
