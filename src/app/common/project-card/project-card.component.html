@@ -18,7 +18,7 @@
     </div>
   </nb-card-body>
   <nb-card-footer class="d-flex flex-wrap" [ngClass]="{'justify-content-center': !videoId, 'justify-content-between' : videoId}">
-    <div *ngIf="videoId">
+    <div>
       <app-video-player  [videoId]="videoId" [title]="header"></app-video-player>
     </div>
     <div>
