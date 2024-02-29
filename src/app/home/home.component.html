@@ -1,5 +1,5 @@
 <section id="about" #about>
-  <div class="row d-flex">
+  <div class="row w-100 d-flex">
     <div class="col-md-8 col-12">
       <app-into-panel class="d-flex"></app-into-panel>
     </div>
@@ -68,7 +68,7 @@
     >
       My Journey so far...
     </div>
-    <div class="row d-flex justify-content-center">
+    <div class="row w-100 d-flex justify-content-center">
       <div
         class="p-5 col-md-4 col-12 timeline animation"
         #leftSkills
@@ -116,7 +116,7 @@
   <div class="portfolio-container animation" #projectCard data-animation="flipIn">
     <div class="row col-md-12 d-flex px-5 justify-content-left section-title">Project Highlights</div>
     <div class="row col-md-12 px-5 d-flex justify-content-center project-desc">{{projectSectionDesc}}</div>
-    <div class="row d-flex justify-content-evenly align-items-center flex-wrap">
+    <div class="row w-100 d-flex justify-content-evenly align-items-center flex-wrap">
       <app-project-card
         class="col-md-4 p-5"
         *ngFor="let data of projectData"
@@ -149,7 +149,7 @@
         <h1>{{contactheader}}</h1>
         <p class="contact-desc">{{contactDesc}}</p>
       </div>
-      <div class="row py-3">
+      <div class="row py-3 px-5">
         <div *ngFor="let item of contactDetails" class="d-flex justify-content-between py-1">
           <i class="fa-3x font-icon contact-icon col-4" [ngClass]="item.icon"></i>
           <a class="d-flex align-items-center contact-text text-decoration-none col-8 w-100" [href]="item.url">{{item.label}}</a>
