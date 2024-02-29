@@ -18,8 +18,7 @@ import {
   ɵɵdefineNgModule,
   ɵɵdirectiveInject,
   ɵɵinject
-} from "./chunk-BPXQU5MZ.js";
-import "./chunk-AOF462FV.js";
+} from "./chunk-YMY5ORGB.js";
 import {
   Chart,
   defaults,
