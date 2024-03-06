@@ -73,7 +73,7 @@ $light-gray: #f0f0f0;
 }
 
 .quote {
-  color: black;
+  color: white;
   font-size: 3.5rem;
   text-wrap: wrap;
   margin: 1rem 0;
@@ -90,6 +90,12 @@ $light-gray: #f0f0f0;
   margin: 1.1rem 0;
 }
 
+.quote-container{
+  background: #000000cc;
+  width: inherit;
+  border-radius: 0.5rem;
+}
+
 @media (max-width: 576px) {
   .border-space {
     display: none !important;
@@ -98,9 +104,9 @@ $light-gray: #f0f0f0;
 
 @media (max-width: 1024px) {
   .quote{
-    font-size: 3rem ;
+    font-size: 2rem ;
   }
   .the-word{
-    font-size: 2.5rem ;
+    font-size: 1.5rem ;
   }
 }
