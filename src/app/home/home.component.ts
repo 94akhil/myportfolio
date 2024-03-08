@@ -38,13 +38,14 @@ export class HomeComponent implements AfterViewInit,OnInit {
     {
       title: "Frontend",
       icon: "fas fa-solid fa-file-code",
-      allTech: ["Angular", "JavaScript", "Typescript", "HTML5", "CSS3"],
+      allTech: ["Angular", "JavaScript", "Typescript", "HTML5", "CSS3","React"],
       allImgIcon: [this.path + "typescript.png"],
       allFontIcon: [
         "fa-brands fa-css3-alt",
         "fa-brands fa-html5",
         "fa-brands fa-js",
         "fa-brands fa-angular",
+        "fa-brands fa-react",
       ],
     },
     {
