@@ -99,7 +99,7 @@ export class HomeComponent implements AfterViewInit,OnInit {
 
   workExperience = [
     {
-      title: "Application Development Senior Analyst",
+      title: "Senior Software Engineer",
       companyName: "Accenture",
       duration: "August 2021 - December 2021",
       timespan: "(5 months)",
