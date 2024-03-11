@@ -73,7 +73,7 @@ $light-gray: #f0f0f0;
 }
 
 .quote {
-  color: white;
+  color: black;
   font-size: 3.5rem;
   text-wrap: wrap;
   margin: 1rem 0;
@@ -91,10 +91,36 @@ $light-gray: #f0f0f0;
 }
 
 .quote-container{
-  background: #000000cc;
   width: inherit;
   border-radius: 0.5rem;
+  border: 4px solid black;
+  animation: spinIn 2s ease-in-out;
 }
+
+.txt-future{
+  animation: glitch1 10s infinite;
+  text-align: center;
+}
+
+@keyframes glitch1 {
+  0%{
+    text-shadow: 0px 0px #000;
+    opacity: 1;
+  }
+  50%{
+    text-shadow: 5px 0px #000;
+    opacity: 0.75;
+  }
+  60%{
+    text-shadow: 0px 0px #000;
+    opacity: 1;
+  }
+  80%{
+    text-shadow: -5px 0px #000;
+    opacity: 0.75;
+  }
+}
+
 
 @media (max-width: 576px) {
   .border-space {
