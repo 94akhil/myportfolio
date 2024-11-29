@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -15,5 +15,6 @@ export class ProjectCardComponent {
 
   navigateToURL(url:any){
     window.open(url)
+  
   }
  }

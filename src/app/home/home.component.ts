@@ -100,6 +100,12 @@ export class HomeComponent implements AfterViewInit,OnInit {
   workExperience = [
     {
       title: "Senior Software Engineer",
+      companyName: "Capgemini",
+      duration: "September 2024 - Current",
+      timespan: "",
+    },
+    {
+      title: "Senior Software Engineer",
       companyName: "Accenture",
       duration: "August 2021 - December 2021",
       timespan: "(5 months)",
@@ -247,7 +253,6 @@ export class HomeComponent implements AfterViewInit,OnInit {
   }
 
   scrollToSection(sectionName: string) {
-    console.log(sectionName)
     if( sectionName=='about' && this.about){
       this.about.nativeElement.scrollIntoView({ behavior: "smooth" });
     }
@@ -267,5 +272,9 @@ export class HomeComponent implements AfterViewInit,OnInit {
       this.contact.nativeElement.scrollIntoView({ behavior: "smooth" });
     }
         
+  }
+
+  onClickScrollTop(){
+    this.router.navigate(['/'])
   }
 }
